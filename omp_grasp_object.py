@@ -23,9 +23,9 @@ import numpy as np
 curr_file_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(curr_file_dir)
 
-from robots.omp_system import OmpSystem
-from robots.omp_rmpflow_controller import RMPFlowController
-from robots.omp_manipulation_controller import OmpManipulationController
+from robots.omp.omp_system import OmpSystem
+from robots.omp.omp_rmpflow_controller import RMPFlowController
+from robots.omp.omp_manipulation_controller import OmpManipulationController
 
 my_world = World(stage_units_in_meters=1.0)
 
@@ -50,7 +50,7 @@ scene.add(obstacle)
 my_robot = OmpSystem(
     prim_path="/World/omp", # should be unique
     name="uid_omp", # should be unique, used to access the object 
-    usd_path=os.path.join(curr_file_dir, "robots/omp_rhp12rn.usd"),
+    usd_path=os.path.join(curr_file_dir, "robots/omp/omp_rhp12rn.usd"),
     #activate_camera=False,
     )
 
