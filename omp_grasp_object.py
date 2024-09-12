@@ -51,7 +51,6 @@ my_robot = OmpSystem(
     prim_path="/World/omp", # should be unique
     name="uid_omp", # should be unique, used to access the object 
     usd_path=os.path.join(curr_file_dir, "robots/omp/omp_rhp12rn.usd"),
-    #activate_camera=False,
     )
 
 scene.add(my_robot)
